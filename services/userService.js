@@ -1,6 +1,5 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { create } = require('../models/User');
 const User = require('../models/User');
 
 const JWT_SECRET = '123asdj123dfa'
@@ -17,7 +16,7 @@ async function register(username, password){
       hashedPassword
 
     });
-    // TODO see assigment if registration creates user session
+   
     return createSession(user);
 }
 
