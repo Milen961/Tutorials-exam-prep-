@@ -56,7 +56,7 @@ const authController = require('express').Router()
     const token = await login(req.body.username, req.body.password);
 
     res.cookie('token', token);
-    res.redirect('/');
+    res.redirect('/'); //TODO replace with redirect by assigment
 
     }catch(error){
       const errors = parseError(error)
